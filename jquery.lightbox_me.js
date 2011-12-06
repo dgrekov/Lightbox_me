@@ -115,6 +115,7 @@
 
             /* Remove or hide all elements */
             function closeLightbox() {
+                opts.beforeClose();
                 var s = $self[0].style;
                 if (opts.destroyOnClose) {
                     $self.add($overlay).remove();
@@ -240,6 +241,7 @@
 
         // callbacks
         onLoad: function() {},
+        beforeClose: function() {},
         onClose: function() {},
 
         // style
